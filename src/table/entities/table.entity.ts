@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 export class Table {
-  id: string;
+  id?: string;
   number: number;
-  createdAt: Date;
-  updatedAt: Date;
+  createdAt?: Date;
+  updatedAt?: Date;
 }

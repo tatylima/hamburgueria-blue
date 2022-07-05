@@ -7,14 +7,17 @@ import { AppModule } from './app.module';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
+  // Validation
   app.useGlobalPipes(new ValidationPipe());
 
+  // Swagger
   const config = new DocumentBuilder()
-    .setTitle('Hamburgueria Blue')
-    .setDescription('Aplicação para gestão das mesas da hamburgueria')
+    .setTitle('Hamburgueria')
+    .setDescription('Aplicação para gestão das mesas de uma hamburgueria')
     .setVersion('1.0.0')
-    .addTag('status')
-    .addTag('table')
+    .addTag('status')   // < A ORDEM PODE SER ALTERADA
+    .addTag('table')    // < A ORDEM PODE SER ALTERADA
+    .addTag('product')  // < A ORDEM PODE SER ALTERADA
     .build();
 
   const document = SwaggerModule.createDocument(app, config);
@@ -22,4 +25,5 @@ async function bootstrap() {
 
   await app.listen(3333);
 }
+
 bootstrap();

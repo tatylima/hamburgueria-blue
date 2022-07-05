@@ -2,7 +2,7 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { PrismaService } from 'src/prisma/prisma.service';
 import { handleErrorConstraintUnique } from 'src/utils/handle-error-unique.util';
-import { CreateTableDto } from './dto/create-table.dto';
+import { CreateTableDto } from './dto/create-table.dto.ts';
 import { UpdateTableDto } from './dto/update-table.dto';
 import { Table } from './entities/table.entity';
 

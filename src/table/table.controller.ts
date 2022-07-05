@@ -8,8 +8,8 @@ import {
   Param,
   Delete,
 } from '@nestjs/common';
-import { TablesService } from './tables.service';
-import { CreateTableDto } from './dto/create-table.dto';
+import { TablesService } from './table.service';
+import { CreateTableDto } from './dto/create-table.dto.ts';
 import { UpdateTableDto } from './dto/update-table.dto';
 import { Table } from './entities/table.entity';
 import { ApiOperation, ApiTags } from '@nestjs/swagger';
